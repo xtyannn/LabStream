@@ -1,4 +1,7 @@
-﻿namespace LabStream
+﻿using System.Drawing;
+using System.Windows.Forms;
+
+namespace LabStream
 {
     partial class FrmMainMenu : System.Windows.Forms.Form
     {
@@ -12,41 +15,49 @@
 
         private void InitializeComponent()
         {
-            btnLab1 = new Button();
-            btnRegistration = new Button();
-            SuspendLayout();
-            // 
+            this.btnLab1 = new System.Windows.Forms.Button();
+            this.btnRegistration = new System.Windows.Forms.Button();
+            this.btnOpenTextFile = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+
             // btnLab1
-            // 
-            btnLab1.Location = new Point(50, 40);
-            btnLab1.Name = "btnLab1";
-            btnLab1.Size = new Size(210, 40);
-            btnLab1.TabIndex = 1;
-            btnLab1.Text = "Basic Text File (FrmLab1)";
-            btnLab1.Click += btnLab1_Click;
-            // 
+            this.btnLab1.Location = new System.Drawing.Point(50, 40);
+            this.btnLab1.Name = "btnLab1";
+            this.btnLab1.Size = new System.Drawing.Size(210, 40);
+            this.btnLab1.TabIndex = 1;
+            this.btnLab1.Text = "Basic Text File (FrmLab1)";
+            this.btnLab1.Click += new System.EventHandler(this.btnLab1_Click);
+
             // btnRegistration
-            // 
-            btnRegistration.Location = new Point(50, 100);
-            btnRegistration.Name = "btnRegistration";
-            btnRegistration.Size = new Size(210, 40);
-            btnRegistration.TabIndex = 0;
-            btnRegistration.Text = "Challenge (Registration)";
-            btnRegistration.Click += btnRegistration_Click;
-            // 
+            this.btnRegistration.Location = new System.Drawing.Point(50, 100);
+            this.btnRegistration.Name = "btnRegistration";
+            this.btnRegistration.Size = new System.Drawing.Size(210, 40);
+            this.btnRegistration.TabIndex = 0;
+            this.btnRegistration.Text = "Challenge (Registration)";
+            this.btnRegistration.Click += new System.EventHandler(this.btnRegistration_Click);
+
+            // btnOpenTextFile
+            this.btnOpenTextFile.Location = new System.Drawing.Point(50, 160);
+            this.btnOpenTextFile.Name = "btnOpenTextFile";
+            this.btnOpenTextFile.Size = new System.Drawing.Size(210, 40);
+            this.btnOpenTextFile.TabIndex = 2;
+            this.btnOpenTextFile.Text = "Open Text File";
+            this.btnOpenTextFile.Click += new System.EventHandler(this.btnOpenTextFile_Click);
+
             // FrmMainMenu
-            // 
-            ClientSize = new Size(311, 181);
-            Controls.Add(btnRegistration);
-            Controls.Add(btnLab1);
-            Font = new Font("Microsoft Sans Serif", 10F);
-            Name = "FrmMainMenu";
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "Main Menu";
-            ResumeLayout(false);
+            this.ClientSize = new System.Drawing.Size(311, 240);
+            this.Controls.Add(this.btnOpenTextFile);
+            this.Controls.Add(this.btnRegistration);
+            this.Controls.Add(this.btnLab1);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.Name = "FrmMainMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Main Menu";
+            this.ResumeLayout(false);
         }
 
         private System.Windows.Forms.Button btnLab1;
         private System.Windows.Forms.Button btnRegistration;
+        private System.Windows.Forms.Button btnOpenTextFile;
     }
 }

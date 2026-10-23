@@ -93,7 +93,13 @@ namespace LabStream
                 MessageBox.Show($"Failed to save registration data. Error:\n{ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
+        private void btnRecords_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmStudentRecord frmStudentRecord = new FrmStudentRecord();
+            frmStudentRecord.ShowDialog();
+            this.Close();
+        }
         private void FrmRegistration_Load(object sender, EventArgs e)
         {
         }

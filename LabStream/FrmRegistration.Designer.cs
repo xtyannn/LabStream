@@ -34,6 +34,7 @@
             label9 = new Label();
             txtContactNo = new TextBox();
             btnRegister = new Button();
+            btnRecords = new Button();
             SuspendLayout();
             // 
             // label1
@@ -182,9 +183,20 @@
             btnRegister.Text = "Register";
             btnRegister.Click += btnRegister_Click;
             // 
+            // btnRecords
+            // 
+            btnRecords.Location = new Point(481, 185);
+            btnRecords.Name = "btnRecords";
+            btnRecords.Size = new Size(100, 30);
+            btnRecords.TabIndex = 20;
+            btnRecords.Text = "Records";
+            btnRecords.UseVisualStyleBackColor = true;
+            btnRecords.Click += btnRecords_Click;
+            // 
             // FrmRegistration
             // 
             ClientSize = new Size(602, 240);
+            Controls.Add(btnRecords);
             Controls.Add(btnRegister);
             Controls.Add(txtContactNo);
             Controls.Add(label9);
@@ -216,6 +228,6 @@
         private System.Windows.Forms.TextBox txtStudentNo, txtLastName, txtFirstName, txtMI, txtAge, txtContactNo;
         private System.Windows.Forms.ComboBox cbProgram, cbGender;
         private System.Windows.Forms.DateTimePicker dtpBirthday;
-        private System.Windows.Forms.Button btnRegister;
+        private System.Windows.Forms.Button btnRegister, btnRecords;
     }
 }
